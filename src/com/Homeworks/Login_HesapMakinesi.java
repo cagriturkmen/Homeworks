@@ -74,6 +74,41 @@ public class Login_HesapMakinesi {
 							int sayi10 = scan12.nextInt();
 							System.out.println("Sonuç:" + (Math.pow(sayi9, sayi10)));
 							break;
+						case 6:
+							System.out.println("Ters yazdırmak istediğiniz kelimeyi giriniz:");
+							Scanner scan13 = new Scanner(System.in);
+							String kelime = scan13.nextLine();
+							for (int i = kelime.length(); i > 0; i--) {
+								System.out.print(kelime.charAt(i - 1));
+							}
+						case 7:
+							System.out.println("A sayısını öğrenmek istediğiniz kelimeyi giriniz:");
+							int sayac;
+							sayac = 0;
+							Scanner scan14 = new Scanner(System.in);
+							String kelime2 = scan14.nextLine();
+							
+							for (int i = 0; i < kelime2.length(); i++) {
+								if (kelime2.charAt(i) == 'a')
+									
+									sayac++;
+								
+							}
+							System.out.println("A sayısı:" + sayac);
+							
+						case 8:
+							System.out.println("Metin giriniz:");
+							String str = "";
+							String metin;
+							Scanner scan15 = new Scanner(System.in);
+							metin = scan15.nextLine();
+							int idx = str.indexOf("ı");
+							char[] chars = str.toCharArray();
+							if (idx >= 0) {
+								chars[idx] = 'i';
+							}
+							str.replace('ı', 'i');
+							
 						case 0:
 							System.exit(0);
 							
